@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrebois <rrebois@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/26 15:08:33 by rrebois           #+#    #+#             */
-/*   Updated: 2023/10/31 11:53:42 by rrebois          ###   ########lyon.fr   */
+/*   Created: 2023/10/31 16:31:59 by rrebois           #+#    #+#             */
+/*   Updated: 2023/10/31 16:41:37 by rrebois          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_H
-# define PHONEBOOK_H
+#include "Account.hpp"
 
-#include <string>
-#include "Contact.hpp"
-
-class PhoneBook
+Account::Account(int initial_deposit) : _amount(initial_deposit)
 {
-	public:
-			Contact	contact[8];
-			int		counter;
+	static int	i;
 
-			PhoneBook(int i);
-			~PhoneBook(void);
+	this->_accountIndex = i;
+	return ;
+}
 
-			void	create_contact(void);
-			void	display(void);
-};
-
-#endif
+Account::~Account(void)
+{
+	return ;
+}
